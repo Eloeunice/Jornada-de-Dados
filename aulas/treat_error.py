@@ -56,14 +56,24 @@ raio = float(input("Escreva o número do raio:"))
 area = math.pi * raio **2
   #Strings (str)
 #Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
+frase = input("Digite uma frase ou uma palavra:")
+print(frase.upper())
 
 #Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
+nome = input('Digite seu nome completo:')
+print(nome.lower())
 
 #Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
-
+frase2 = input("Digite uma frase ou uma palavra:")
+print(frase.strip())
 #Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
-
+data = input('Digite a data no formato "dd/mm/aaaa":')
+print(data.split('/'))
 #Escreva um programa que concatene duas strings fornecidas pelo usuário.
+frase2 = input("Digite uma frase ou uma palavra:")
+frase3 = input("Digite uma frase ou uma palavra")
+frases = frase2 + frase3
+print(frases)
 
   #Booleanos (bool)
 #Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
