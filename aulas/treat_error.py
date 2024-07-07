@@ -49,11 +49,12 @@ print(pot)
 
 #Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 temp_celsius = float(input("Digite a temperatura em celsius:"))
-temp_f = temp_celsius * 1,8 + 32
+temp_f = temp_celsius * 1.8 + 32
 print(temp_f)
 #Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
 raio = float(input("Escreva o número do raio:"))
 area = math.pi * raio **2
+print(area)
   #Strings (str)
 #Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
 frase = input("Digite uma frase ou uma palavra:")
@@ -65,13 +66,13 @@ print(nome.lower())
 
 #Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
 frase2 = input("Digite uma frase ou uma palavra:")
-print(frase.strip())
+print(frase2.strip())
 #Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
 data = input('Digite a data no formato "dd/mm/aaaa":')
 print(data.split('/'))
 #Escreva um programa que concatene duas strings fornecidas pelo usuário.
 frase2 = input("Digite uma frase ou uma palavra:")
-frase3 = input("Digite uma frase ou uma palavra")
+frase3 = input("Digite uma frase ou uma palavra:")
 frases = frase2 + frase3
 print(frases)
 
