@@ -77,11 +77,27 @@ print(frases)
 
   #Booleanos (bool)
 #Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
+resposta1 = bool(input(('Coloque uma expressao booleana:')))
+resposta2 = bool(input(('Coloque uma expressao booleana:')))
+print(resposta1 and resposta2)
+
 
 #Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
+resposta3 = bool(input(('Coloque uma expressao booleana:')))
+resposta4 = bool(input(('Coloque uma expressao booleana:')))
+print(resposta3 or resposta4)
+
 
 #Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+resposta5 = bool(input(('Coloque uma expressao booleana:')))
+print(not resposta5)
 
 #Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+numero1 = int(input('Digite o primeiro número:'))
+numero2 = int(input('Digite o segundo número:'))
+print(numero1 == numero2)
 
 #Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
+numero3 = int(input('Digite o primeiro número:'))
+numero4 = int(input('Digite o segundo número:'))
+print(numero3!= numero4)
