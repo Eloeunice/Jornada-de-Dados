@@ -113,7 +113,7 @@ try:
     temp_f = temp_celsius * 1.8 + 32
     print(temp_f)
 except:
-    print('O valor colocado não é do tipo float')
+    print('O valor colocado não é válido!')
 
 # 22: Verificador de Palíndromo
 
