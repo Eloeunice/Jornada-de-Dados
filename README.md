@@ -8,3 +8,5 @@
       - Entrada e Saída
       - Tipos de Dados
       - Operadores lógicos
+      - Tratamento de Erros
+      - Controle de Fluxo
