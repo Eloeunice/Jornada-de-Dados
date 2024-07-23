@@ -28,5 +28,6 @@ valor_final = salario + salario * (bonus/100)
 # 5) Imprime a mensagem personalizada incluindo o nome do usuário, salário e bônus
 print(f'Olá {nome}, o seu salário com o bônus é de {valor_final:.2f} reais')
 
+
 # Bônus: Quantos bugs e riscos você consegue identificar nesse programa?
      #O usuário pode digitar um número no nome
