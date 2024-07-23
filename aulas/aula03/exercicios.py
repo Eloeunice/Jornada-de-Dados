@@ -33,7 +33,9 @@ else:
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
-
+log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+if log.get('level') == 'ERROR':
+    print(log.get('message'))
 
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
@@ -41,23 +43,62 @@ else:
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
+idade = int(input('Digite sua idade:'))
+email = input('Digite seu email:')
+while True:
+    if 18 < idade > 65:
+     print('A sua idade não está está entre 18 e 65 anos')
+    if '@' not in email:
+      print('O seu email não possui um @')
+    else:
+     print('Dados de usuário válidos')
+    break
+
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
 
+valor = float(input('Qual o valor da transacao:'))
+
+hora = int(input('Qual a hora da transacao:'))
+
+transacao = {'valor': valor, 'hora': hora}
+
+if transacao['valor'] > 10000 or 9 > transacao['hora'] > 18:
+   print('Transacao suspeita')
+   
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
+count = {} # Dicionario que vai receber a contagem das palavras
+texto = input('Digite um texto:') # recebe o texto a ser analisado
+palavras = texto.split(' ') # lista das palavras
+for palavra in palavras: # para cada palavra da lista de palavras
+    if palavra in count: # se a palavra estiver no dicionario
+        count[palavra] += 1 # soma 1 na conta dessa palavra
+    else: # se nao estiver no dicionario
+        count[palavra] = 1 # a contagem dela é um
+print(palavra, count) # mostra a palavra e quantas vezes ela apareceu 
+
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+numeros =[4,5,6,7,8]
+for num in numeros:
+   while num not in [0,1]:
+    num -= 1 
+   numeros.append(num)
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
+numeros = [1,2,3,4,5,6,7,8,9]
+for num in numeros:
+   if num % 2 == 0:
+      print(num)
 
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
