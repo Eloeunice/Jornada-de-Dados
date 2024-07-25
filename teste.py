@@ -1,7 +1,13 @@
-# ARQUIVO PARA FAZER OS TESTES DOS EXERCÍCIOS
-numeros =[4,5,6,7,8]
-for num in numeros:
-   while num not in [0,1]:
-     num -= 1 
-   numeros.append(num)
-print(numeros)
+### Exercício 15. Processamento de Dados com Condição de Parada
+# Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+lista = ['maca', 'banana', 'chocolate', 'bicicleta', 'pipoca', 'chinelo']
+
+i = 0
+while i < len(lista):
+   if lista[i] == 'chocolate':
+      print('Valor encontrado!')
+      break
+   print(f'{lista[i]}')
+   i += 1
+   

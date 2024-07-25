@@ -34,7 +34,7 @@ else:
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
 log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
-if log.get('level') == 'ERROR':
+if log.get('level') == 'ERROR': # *log['level'] == 'ERROR'
     print(log.get('message'))
 
 ### Exercício 4: Validação de Dados de Entrada
@@ -93,6 +93,16 @@ for num in numeros:
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
+dados = [{'nome': 'Maria', 'email': 'maria@gmail.com'},
+   {'nome': 'João', 'email': 'joao@gmail.com'},
+   {'nome': 'Pedro', 'email': ''},
+   {'nome': 'Lucas', 'email': 'lucas@hotmail.com'}]
+          
+usuarios_validos = [usuario for usuario in dados if usuario["email"]]
+# usuarios validos recebem a lista de usuario para os usuarios na lista de dados se o usuario tem email
+
+print(usuarios_validos)
+
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 numeros = [1,2,3,4,5,6,7,8,9]
@@ -103,19 +113,78 @@ for num in numeros:
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
 
+vendas = [
+    {"categoria": "eletrônicos", "valor": 1200},
+    {"categoria": "livros", "valor": 200},
+    {"categoria": "eletrônicos", "valor": 800}
+]
+
+# CRIO O DICIONARIO QUE VAI RECEBER RESULTADO FINAL
+
+total_por_categoria = {} #var que armazena o valor total pela categoria
+
+# PASSO PELO DICIONARIO VERIFICANDO CADA VENDA E VOU GUARDANDO A CATEGORIA E O VALOR DE CADA UMA
+
+for venda in vendas: #para cada venda 
+    categoria = venda["categoria"] #a categoria vai receber a categoria que foi armazenada na lista de vendas
+    valor = venda["valor"] #valor recebe o valor que foi armazenado na lista de vendas
+
+    if categoria in total_por_categoria: # se a categoria esta no dicionario que aramzena os resultados
+        total_por_categoria[categoria] += valor # voce soma o valor denovo
+    else:
+        total_por_categoria[categoria] = valor #senao permanece com o unico valor salvo mesmo
+
+print(total_por_categoria)
+
+
 ### Exercícios com WHILE
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+word = str
+
+while word != 'sair':
+   word = input('Digite uma palavra:')
+print('saindo..')
 
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+num = int
+
+while num not in [14,15,16,18,19]:
+   num = int(input('Digite um número entre 14 e 19:'))
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
+pagina_inicial =1
+pagina_final = 2
 
+while pagina_inicial <= pagina_final:
+   print(f'Processando pagina {pagina_inicial} de {pagina_final}')
+   time.sleep(1)
+print('Terminado')
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
 
+import time
+tent = 0
+conex = False
+
+while tent < 5:
+   conex = False
+   tent += 1
+   time.sleep(1)
+   print(f'tentativas:{tent} conexão:{conex}')
+
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+lista = ['maca', 'banana', 'chocolate', 'bicicleta', 'pipoca', 'chinelo']
+
+i = 0
+while i < len(lista):
+   if lista[i] == 'chinelo':
+      print('Valor encontrado!')
+      break
+   print(f'{itens[i]}')
+   i += 1
