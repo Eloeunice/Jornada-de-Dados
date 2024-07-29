@@ -42,9 +42,6 @@ for letra in frase: # para cada letra na frase
       letras[letra] = 1
 print(letras)
    
-
-
-
 #Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
 
 frutas: list= ["maçã", "banana", "cereja"]
@@ -54,3 +51,25 @@ total = 0 # total = sum(precos[item] for item in lista_compras)
 for p in preco.values():
    total += p
 print(total)
+
+ #Eliminação de Duplicatas Objetivo: Dada uma lista de emails, remover todos os duplicados.
+
+# Filtragem de Dados Objetivo: Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
+
+# Ordenação Personalizada Objetivo: Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
+
+# Ordenação Personalizada Objetivo: Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
+
+# Divisão de Dados em Grupos Objetivo: Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
+
+# EXERCICIOS COM DICIONARIOS
+
+# Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
+
+# Dados dois dicionários, fundi-los em um único dicionário.
+
+# Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
+
+# Dado um dicionário, criar listas separadas para suas chaves e valores.
+
+# Dada uma string, contar a frequência de cada caractere usando um dicionário.
