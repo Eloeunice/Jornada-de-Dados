@@ -10,3 +10,4 @@
       - Operadores lógicos
       - Tratamento de Erros
       - Controle de Fluxo
+      - Typing, Listas e Dicionários
