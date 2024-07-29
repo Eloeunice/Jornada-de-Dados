@@ -186,5 +186,5 @@ while i < len(lista):
    if lista[i] == 'chinelo':
       print('Valor encontrado!')
       break
-   print(f'{itens[i]}')
+   print(f'{lista[i]}')
    i += 1
